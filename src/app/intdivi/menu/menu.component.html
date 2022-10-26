@@ -1,0 +1,14 @@
+<ion-grid>
+  <ion-row>
+
+    <ion-col size="auto">
+      <ion-list lines="full">
+        <ion-item *ngFor="let opciones of listamenu">
+          <ion-label size="auto" (click)="onClick(opciones.pagina)">{{opciones.opcion}}</ion-label>
+
+        </ion-item>
+      </ion-list>
+    </ion-col>
+
+  </ion-row>
+</ion-grid>

@@ -1,0 +1,29 @@
+<ion-content >
+  <ion-label>Nueva Institucion</ion-label>
+
+  <p></p>
+
+  <ion-item>
+    <ion-label position="floating">ID</ion-label>
+    <ion-input placeholder="INGRESAR ID DE LA INSTITUCION"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">NOMBRE DE LA INSTITUCION</ion-label>
+    <ion-input placeholder="INGRESAR NOMBRE DE LA INSTIRUCION"></ion-input>
+  </ion-item>
+
+  <ion-button color="danger" (click)="presentConfirmacion()">Agregar</ion-button>
+
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col>Id Institucion</ion-col>
+      <ion-col>Nombre Institucion</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
