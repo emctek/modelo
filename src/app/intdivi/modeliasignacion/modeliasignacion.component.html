@@ -1,0 +1,32 @@
+<p></p>
+<ion-grid >
+
+  <ion-row >
+
+    <ion-col >Id </ion-col>
+    <ion-col >Nombre Institucion</ion-col>
+    <ion-col >Nombre Division</ion-col>
+    <ion-col >Modificar</ion-col>
+    <ion-col >Eliminar</ion-col>
+
+  </ion-row>
+
+  <ion-row >
+
+    <ion-col >1</ion-col>
+    <ion-col >Tecnologico de Estudios Superiores de Ecatepec</ion-col>
+    <ion-col >Division en Sistemas Computacionales</ion-col>
+    <ion-col >
+      <ion-button color="warning" (click)="modificar()">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col >
+      <ion-button color="danger" (click)="eliminar()">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-col>
+
+  </ion-row>
+
+</ion-grid>

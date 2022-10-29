@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { ListamenuService } from '../../listamenu.service';
 
 @Component({
@@ -11,7 +10,10 @@ export class MenuComponent implements OnInit {
 
   listamenu = [];
 
-  constructor(private  opciones: ListamenuService, private router: Router) { }
+  caso: number;
+  titulo: string;
+
+  constructor(private  opciones: ListamenuService) { }
 
 
 
@@ -21,9 +23,10 @@ export class MenuComponent implements OnInit {
 
 
 
-      onClick(pagina: string){
+      onClick(id: number, opcion: string){
 
-        this.router.navigate([pagina]);
+        this.caso = id;
+        this.titulo = opcion;
 
       }
 

@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 
-
 @Component({
-  selector: 'app-nuevadivision',
-  templateUrl: './nuevadivision.component.html',
-  styleUrls: ['./nuevadivision.component.scss'],
+  selector: 'app-asignadivision',
+  templateUrl: './asignadivision.component.html',
+  styleUrls: ['./asignadivision.component.scss'],
 })
-export class NuevadivisionComponent implements OnInit {
+export class AsignadivisionComponent implements OnInit {
 
   constructor(private alertController: AlertController) { }
 
@@ -15,7 +14,7 @@ export class NuevadivisionComponent implements OnInit {
   async presentConfirmacion() {
     const alert = await this.alertController.create({
       header: 'Agregado',
-      message: 'Division Agregada',
+      message: 'Division Asignada',
       buttons: ['OK'],
     });
 

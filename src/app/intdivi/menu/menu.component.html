@@ -1,13 +1,33 @@
-<ion-grid>
+<ion-grid >
   <ion-row>
 
     <ion-col size="auto">
-      <ion-list lines="full">
-        <ion-item *ngFor="let opciones of listamenu">
-          <ion-label size="auto" (click)="onClick(opciones.pagina)">{{opciones.opcion}}</ion-label>
 
+      <ion-list lines="full">
+        <ion-item (click)="onClick(opciones.id, opciones.opcion)" *ngFor="let opciones of listamenu">
+          <ion-label>{{opciones.opcion}}</ion-label>
         </ion-item>
       </ion-list>
+
+    </ion-col>
+
+
+    <ion-col [ngSwitch]="caso" >
+
+      <ion-label>{{titulo}}</ion-label>
+      <p></p>
+
+      <app-newinstitucion *ngSwitchCase="'1'"></app-newinstitucion>
+      <app-nuevadivision *ngSwitchCase="'2'"></app-nuevadivision>
+      <app-asignadivision *ngSwitchCase="'3'"></app-asignadivision>
+      <app-modeliinstitucion *ngSwitchCase="'4'"></app-modeliinstitucion>
+      <app-modelidivision *ngSwitchCase="'5'"></app-modelidivision>
+      <app-modeliasignacion *ngSwitchCase="'6'"></app-modeliasignacion>
+      <app-consultas *ngSwitchCase="'7'"></app-consultas>
+      <p *ngSwitchDefault>
+        <ion-label>INICIO</ion-label>
+        <ion-img style="width: 150px; height: 150px;" src="assets/logotese.jpg"></ion-img>
+      </p>
     </ion-col>
 
   </ion-row>

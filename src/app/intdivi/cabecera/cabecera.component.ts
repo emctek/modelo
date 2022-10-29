@@ -7,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CabeceraComponent implements OnInit {
 
-  constructor() { }
+  aparece = false;
+
+  constructor() {}
 
   ngOnInit() {}
 
+  onBuscarA(validar: boolean) {
+    this.aparece = validar;
+
+    console.log(this.aparece);
+  }
 }

@@ -7,6 +7,11 @@ import { MenuComponent } from 'src/app/intdivi/menu/menu.component';
 import { PieComponent } from '../pie/pie.component';
 import { NewinstitucionComponent } from '../newinstitucion/newinstitucion.component';
 import { NuevadivisionComponent } from '../nuevadivision/nuevadivision.component';
+import { AsignadivisionComponent } from '../asignadivision/asignadivision.component';
+import { ModelidivisionComponent } from '../modelidivision/modelidivision.component';
+import { ModeliinstitucionComponent } from '../modeliinstitucion/modeliinstitucion.component';
+import { ModeliasignacionComponent } from '../modeliasignacion/modeliasignacion.component';
+import { ConsultasComponent } from '../consultas/consultas.component';
 
 
 
@@ -17,7 +22,12 @@ import { NuevadivisionComponent } from '../nuevadivision/nuevadivision.component
     MenuComponent,
     PieComponent,
     NewinstitucionComponent,
-    NuevadivisionComponent
+    NuevadivisionComponent,
+    AsignadivisionComponent,
+    ModelidivisionComponent,
+    ModeliinstitucionComponent,
+    ModeliasignacionComponent,
+    ConsultasComponent
 
   ],
   imports: [
@@ -29,7 +39,12 @@ import { NuevadivisionComponent } from '../nuevadivision/nuevadivision.component
     MenuComponent,
     PieComponent,
     NewinstitucionComponent,
-    NuevadivisionComponent
+    NuevadivisionComponent,
+    AsignadivisionComponent,
+    ModelidivisionComponent,
+    ModeliinstitucionComponent,
+    ModeliasignacionComponent,
+    ConsultasComponent
 
 
   ]
