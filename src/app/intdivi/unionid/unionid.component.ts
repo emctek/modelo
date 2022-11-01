@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ListamenuService } from '../../listamenu.service';
+import { ListamenuService } from 'src/app/listamenu.service';
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss'],
+  selector: 'app-unionid',
+  templateUrl: './unionid.component.html',
+  styleUrls: ['./unionid.component.scss'],
 })
-export class MenuComponent implements OnInit {
+export class UnionidComponent implements OnInit {
 
   listamenu = [];
 
