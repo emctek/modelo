@@ -18,14 +18,13 @@
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title>INSTITUCIONES/DIVISIONES</ion-title>
+      <ion-title>{{titulo}}</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
     <ion-grid >
       <ion-row>
         <ion-col [ngSwitch]="caso">
-          <ion-label>{{titulo}}</ion-label>
           <app-newinstitucion *ngSwitchCase="'1'"></app-newinstitucion>
           <app-nuevadivision *ngSwitchCase="'2'"></app-nuevadivision>
           <app-asignadivision *ngSwitchCase="'3'"></app-asignadivision>

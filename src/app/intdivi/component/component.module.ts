@@ -9,7 +9,6 @@ import { ModeliinstitucionComponent } from '../modeliinstitucion/modeliinstituci
 import { ModeliasignacionComponent } from '../modeliasignacion/modeliasignacion.component';
 import { ConsultasComponent } from '../consultas/consultas.component';
 import { UnionidComponent } from '../unionid/unionid.component';
-import { MenuComponent } from '../menu/menu.component';
 import { MenuceComponent } from '../../../../../examen/src/app/menuce/menuce/menuce.component';
 
 
@@ -24,8 +23,7 @@ import { MenuceComponent } from '../../../../../examen/src/app/menuce/menuce/men
     ModeliinstitucionComponent,
     ModeliasignacionComponent,
     ConsultasComponent,
-    UnionidComponent,
-    MenuComponent
+    UnionidComponent
 
   ],
   imports: [
@@ -41,8 +39,7 @@ import { MenuceComponent } from '../../../../../examen/src/app/menuce/menuce/men
     ModeliinstitucionComponent,
     ModeliasignacionComponent,
     ConsultasComponent,
-    UnionidComponent,
-    MenuComponent
+    UnionidComponent
 
   ]
 })
