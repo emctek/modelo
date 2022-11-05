@@ -9,14 +9,14 @@ import { ModeliinstitucionComponent } from '../modeliinstitucion/modeliinstituci
 import { ModeliasignacionComponent } from '../modeliasignacion/modeliasignacion.component';
 import { ConsultasComponent } from '../consultas/consultas.component';
 import { UnionidComponent } from '../unionid/unionid.component';
+import { MenuComponent } from '../menu/menu.component';
+import { MenuceComponent } from '../../../../../examen/src/app/menuce/menuce/menuce.component';
 
 
 
 
 @NgModule({
   declarations: [
-  
-  
     NewinstitucionComponent,
     NuevadivisionComponent,
     AsignadivisionComponent,
@@ -24,7 +24,8 @@ import { UnionidComponent } from '../unionid/unionid.component';
     ModeliinstitucionComponent,
     ModeliasignacionComponent,
     ConsultasComponent,
-    UnionidComponent
+    UnionidComponent,
+    MenuComponent
 
   ],
   imports: [
@@ -32,7 +33,7 @@ import { UnionidComponent } from '../unionid/unionid.component';
     IonicModule
   ],
   exports: [
-  
+
     NewinstitucionComponent,
     NuevadivisionComponent,
     AsignadivisionComponent,
@@ -40,8 +41,8 @@ import { UnionidComponent } from '../unionid/unionid.component';
     ModeliinstitucionComponent,
     ModeliasignacionComponent,
     ConsultasComponent,
-    UnionidComponent
-
+    UnionidComponent,
+    MenuComponent
 
   ]
 })

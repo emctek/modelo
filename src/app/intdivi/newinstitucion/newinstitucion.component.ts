@@ -13,7 +13,7 @@ export class NewinstitucionComponent implements OnInit {
 
   async presentConfirmacion() {
     const alert = await this.alertController.create({
-      header: 'Agregado',
+      header: 'Agregada',
       message: 'Institucion Agregada',
       buttons: ['OK'],
     });

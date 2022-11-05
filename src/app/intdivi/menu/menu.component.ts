@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ListamenuService } from 'src/app/intdivi/listamenu.service';
 
 @Component({
-  selector: 'app-unionid',
-  templateUrl: './unionid.component.html',
-  styleUrls: ['./unionid.component.scss'],
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.scss'],
 })
-export class UnionidComponent implements OnInit {
+export class MenuComponent implements OnInit {
 
   listamenu = [];
 

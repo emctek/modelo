@@ -14,7 +14,7 @@ export class NuevadivisionComponent implements OnInit {
 
   async presentConfirmacion() {
     const alert = await this.alertController.create({
-      header: 'Agregado',
+      header: 'Agregada',
       message: 'Division Agregada',
       buttons: ['OK'],
     });
