@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-
 import { InicioPageRoutingModule } from './inicio-routing.module';
-
 import { InicioPage } from './inicio.page';
 import { ComponentModule } from '../component/component.module';
 
@@ -15,7 +12,8 @@ import { ComponentModule } from '../component/component.module';
     FormsModule,
     IonicModule,
     InicioPageRoutingModule,
-    ComponentModule
+    ComponentModule,
+    ReactiveFormsModule
   ],
   declarations: [InicioPage]
 })

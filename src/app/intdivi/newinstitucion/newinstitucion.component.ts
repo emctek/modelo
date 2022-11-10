@@ -1,4 +1,6 @@
+import { NumberFormatStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -8,10 +10,22 @@ import { AlertController } from '@ionic/angular';
 })
 export class NewinstitucionComponent implements OnInit {
 
-  constructor(private alertController: AlertController) { }
+  datosins;
+
+  constructor(private alertController: AlertController, private ins: FormBuilder) {
+
+    this.datosins = ins.group({
+      nombre: ["",Validators.required],
+      
+    });
+
+   }
 
 
   async presentConfirmacion() {
+
+  
+
     const alert = await this.alertController.create({
       header: 'Agregada',
       message: 'Institucion Agregada',
@@ -19,7 +33,52 @@ export class NewinstitucionComponent implements OnInit {
     });
 
     await alert.present();
+
   }
+
+  async modificar() {
+
+    const alert = await this.alertController.create({
+      header: 'Nuevo Nombre',
+      buttons: ['OK'],
+      inputs: [
+        {
+          placeholder: 'Nuevo Nombre',
+          attributes: {
+            maxlength: 200,
+          },
+        }
+      ] ,
+    });
+
+    await alert.present();
+
+  }
+
+  async eliminar() {
+
+    const alert = await this.alertController.create({
+
+      header: 'Eliminar',
+
+      buttons: [
+        {
+          text: 'Cancelar'
+
+        },
+        {
+          text: 'Eliminar'
+
+        },
+      ],
+    });
+
+    await alert.present();
+
+  }
+
+
+
 
   ngOnInit() {}
 

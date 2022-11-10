@@ -10,6 +10,7 @@ import { ModeliasignacionComponent } from '../modeliasignacion/modeliasignacion.
 import { ConsultasComponent } from '../consultas/consultas.component';
 import { UnionidComponent } from '../unionid/unionid.component';
 import { MenuceComponent } from '../../../../../examen/src/app/menuce/menuce/menuce.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -28,7 +29,8 @@ import { MenuceComponent } from '../../../../../examen/src/app/menuce/menuce/men
   ],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
+    ReactiveFormsModule
   ],
   exports: [
 
