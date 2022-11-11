@@ -1,25 +1,37 @@
-<ion-grid>
-  <ion-row>
-    <ion-col>
-      <ion-item>
-        <ion-label position="floating">No. Registro</ion-label>
-        <ion-input placeholder="Ingresa numero de registro"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label position="floating">Nombre Divicion</ion-label>
-        <ion-input placeholder="Ingresa nombre de la division"></ion-input>
-      </ion-item>
-
-      <ion-button color="danger" (click)="presentConfirmacion()">Agregar</ion-button>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>No. Registro</ion-col>
-    <ion-col>Nombre Division</ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>1</ion-col>
-    <ion-col>Division De Sistemas Computacionales</ion-col>
-  </ion-row>
-</ion-grid>
+<form [formGroup]="datosdiv">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Nombre Divicion</ion-label>
+          <ion-input formControlName="nombre"></ion-input>
+          <ion-label *ngIf="datosdiv.controls.nombre.invalid && datosdiv.controls.nombre.touched">Campo Requerido
+          </ion-label>
+        </ion-item>
+        <ion-button [disabled]="!datosdiv.valid" color="danger" (click)="presentConfirmacion()">Agregar</ion-button>
+      </ion-col>
+    </ion-row>
+    <p></p>
+    <p></p>
+    <ion-row>
+      <ion-col>No. Registro</ion-col>
+      <ion-col>Nombre Division</ion-col>
+      <ion-col>Modificar</ion-col>
+      <ion-col>Eliminar</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>1</ion-col>
+      <ion-col>Division de Ingeneria en Sistemas Computacionales</ion-col>
+      <ion-col>
+        <ion-button color="warning" (click)="modificar()">
+          <ion-icon name="create-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="danger" (click)="eliminar()">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</form>

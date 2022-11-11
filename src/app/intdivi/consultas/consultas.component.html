@@ -1,37 +1,41 @@
-<ion-grid>
-  <ion-row>
-    <ion-col>
-      <ion-item>
-        <ion-label position="floating">Nombre Institucion</ion-label>
-        <ion-input placeholder="INGRESAR NOMBRE DE LA INSTITUCION"></ion-input>
-      </ion-item>
-      <ion-button>Buscar</ion-button>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-label position="floating">INSTITUCION</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>No. Registro</ion-col>
-    <ion-col>Nombre Institucion</ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>1</ion-col>
-    <ion-col>Tecnologico de Estudios Superiores de Ecatepec</ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-label position="floating">DIVISION</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>No. Registro</ion-col>
-    <ion-col>Nombre Division</ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>8</ion-col>
-    <ion-col>Division de Ingenieria en Sistemas Computacionales</ion-col>
-  </ion-row>
-</ion-grid>
+<form [formGroup]="datoscon">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Nombre Institucion</ion-label>
+          <ion-input formControlName="institucion"></ion-input>
+          <ion-label *ngIf="datoscon.controls.institucion.invalid && datoscon.controls.institucion.touched">Campo
+            Requerido</ion-label>
+        </ion-item>
+        <ion-button [disabled]="!datoscon.valid" color="danger">Buscar</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">INSTITUCION</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>No. Registro</ion-col>
+      <ion-col>Nombre Institucion</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>1</ion-col>
+      <ion-col>Tecnologico de Estudios Superiores de Ecatepec</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">DIVISION</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>No. Registro</ion-col>
+      <ion-col>Nombre Division</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>8</ion-col>
+      <ion-col>Division de Ingenieria en Sistemas Computacionales</ion-col>
+    </ion-row>
+  </ion-grid>
+</form>

@@ -5,11 +5,14 @@
         <ion-item>
           <ion-label position="floating">Nombre Institucion</ion-label>
           <ion-input formControlName="nombre"></ion-input>
-          <ion-label *ngIf="datosins.controls.nombre.invalid && datosins.controls.nombre.touched">requerido</ion-label>
+          <ion-label *ngIf="datosins.controls.nombre.invalid && datosins.controls.nombre.touched">Campo Requerido
+          </ion-label>
         </ion-item>
         <ion-button [disabled]="!datosins.valid" color="danger" (click)="presentConfirmacion()">Agregar</ion-button>
       </ion-col>
     </ion-row>
+    <p></p>
+    <p></p>
     <ion-row>
       <ion-col>No. Registro</ion-col>
       <ion-col>Nombre Institucion</ion-col>

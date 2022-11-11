@@ -8,11 +8,11 @@ export class ListamenuService {
   listamenu = [
     {
       id: 1,
-      opcion: 'Nueva Institucion'
+      opcion: 'Instituciones'
     },
     {
       id: 2,
-      opcion: 'Nueva Division'
+      opcion: 'Divisiones'
     },
     {
       id: 3,
@@ -20,18 +20,6 @@ export class ListamenuService {
     },
     {
       id: 4,
-      opcion: 'Modificar/Eliminar Institucion'
-    },
-    {
-      id: 5,
-      opcion: 'Modificar/Eliminar Division'
-    },
-    {
-      id: 6,
-      opcion: 'Modificar/Eliminar Asignacion de Division'
-    },
-    {
-      id: 7,
       opcion: 'Consultas'
     },
   ];

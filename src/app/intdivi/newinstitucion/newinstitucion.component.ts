@@ -1,4 +1,3 @@
-import { NumberFormatStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
@@ -12,20 +11,16 @@ export class NewinstitucionComponent implements OnInit {
 
   datosins;
 
-  constructor(private alertController: AlertController, private ins: FormBuilder) {
-
+  constructor(
+    private alertController: AlertController,
+    private ins: FormBuilder
+  ) {
     this.datosins = ins.group({
-      nombre: ["",Validators.required],
-      
+      nombre: ['', Validators.required],
     });
-
-   }
-
+  }
 
   async presentConfirmacion() {
-
-  
-
     const alert = await this.alertController.create({
       header: 'Agregada',
       message: 'Institucion Agregada',
@@ -33,11 +28,9 @@ export class NewinstitucionComponent implements OnInit {
     });
 
     await alert.present();
-
   }
 
   async modificar() {
-
     const alert = await this.alertController.create({
       header: 'Nuevo Nombre',
       buttons: ['OK'],
@@ -47,39 +40,29 @@ export class NewinstitucionComponent implements OnInit {
           attributes: {
             maxlength: 200,
           },
-        }
-      ] ,
-    });
-
-    await alert.present();
-
-  }
-
-  async eliminar() {
-
-    const alert = await this.alertController.create({
-
-      header: 'Eliminar',
-
-      buttons: [
-        {
-          text: 'Cancelar'
-
-        },
-        {
-          text: 'Eliminar'
-
         },
       ],
     });
 
     await alert.present();
-
   }
 
+  async eliminar() {
+    const alert = await this.alertController.create({
+      header: 'Eliminar',
 
+      buttons: [
+        {
+          text: 'Cancelar',
+        },
+        {
+          text: 'Eliminar',
+        },
+      ],
+    });
 
+    await alert.present();
+  }
 
   ngOnInit() {}
-
 }

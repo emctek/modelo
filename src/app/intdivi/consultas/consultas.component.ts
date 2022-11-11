@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-consultas',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsultasComponent implements OnInit {
 
-  constructor() { }
+  datoscon;
+
+  constructor(private con: FormBuilder) {
+    this.datoscon = con.group({
+      institucion: ['', Validators.required],
+    });
+   }
 
   ngOnInit() {}
 

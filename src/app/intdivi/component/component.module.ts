@@ -4,25 +4,15 @@ import { IonicModule } from '@ionic/angular';
 import { NewinstitucionComponent } from '../newinstitucion/newinstitucion.component';
 import { NuevadivisionComponent } from '../nuevadivision/nuevadivision.component';
 import { AsignadivisionComponent } from '../asignadivision/asignadivision.component';
-import { ModelidivisionComponent } from '../modelidivision/modelidivision.component';
-import { ModeliinstitucionComponent } from '../modeliinstitucion/modeliinstitucion.component';
-import { ModeliasignacionComponent } from '../modeliasignacion/modeliasignacion.component';
 import { ConsultasComponent } from '../consultas/consultas.component';
 import { UnionidComponent } from '../unionid/unionid.component';
-import { MenuceComponent } from '../../../../../examen/src/app/menuce/menuce/menuce.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
-
-
 
 @NgModule({
   declarations: [
     NewinstitucionComponent,
     NuevadivisionComponent,
     AsignadivisionComponent,
-    ModelidivisionComponent,
-    ModeliinstitucionComponent,
-    ModeliasignacionComponent,
     ConsultasComponent,
     UnionidComponent
 
@@ -37,9 +27,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     NewinstitucionComponent,
     NuevadivisionComponent,
     AsignadivisionComponent,
-    ModelidivisionComponent,
-    ModeliinstitucionComponent,
-    ModeliasignacionComponent,
     ConsultasComponent,
     UnionidComponent
 
