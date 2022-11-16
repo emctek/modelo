@@ -1,0 +1,74 @@
+<form [formGroup]="datosasipos">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-label>Seleciona una institucion</ion-label>
+        <ion-list>
+          <ion-item>
+            <ion-select formControlName="institucion" interface="popover" placeholder="Seleccione una Institucion">
+              <ion-select-option class="prueba" value="1">Tecnologico de Estudios Superiores de Ecatepec
+              </ion-select-option>
+              <ion-select-option class="prueba" value="2">Tecnologico de Estudios Superiores de Veracruz
+              </ion-select-option>
+              <ion-select-option class="prueba" value="3">Tecnologico de Estudios Superiores de Tecamac
+              </ion-select-option>
+            </ion-select>
+            <ion-label *ngIf="datosasipos.controls.institucion.invalid && datosasipos.controls.institucion.touched">
+              Seleccion
+              Requerida</ion-label>
+          </ion-item>
+        </ion-list>
+        <ion-label>Seleciona una division</ion-label>
+        <ion-list>
+          <ion-item>
+            <ion-select formControlName="division" interface="popover" placeholder="Seleccione una Division">
+              <ion-select-option value="1">Division en Sistemas Computacionales</ion-select-option>
+              <ion-select-option value="2">Division en Mecatronica</ion-select-option>
+              <ion-select-option value="3">Division en Informatica</ion-select-option>
+            </ion-select>
+            <ion-label *ngIf="datosasipos.controls.division.invalid && datosasipos.controls.division.touched">Seleccion
+              Requerida</ion-label>
+          </ion-item>
+        </ion-list>
+        <ion-label>Seleciona un posgrado</ion-label>
+        <ion-list>
+          <ion-item>
+            <ion-select formControlName="posgrado" interface="popover" placeholder="Seleccione un Posgrado">
+              <ion-select-option value="1">Maestría en Ingeniería en Sistemas Computacionales</ion-select-option>
+              <ion-select-option value="2">Maestría en Ciencias en Ingeniería Mecatrónica</ion-select-option>
+            </ion-select>
+            <ion-label *ngIf="datosasipos.controls.posgrado.invalid && datosasipos.controls.posgrado.touched">Seleccion
+              Requerida</ion-label>
+          </ion-item>
+        </ion-list>
+        <ion-button [disabled]="!datosasipos.valid" color="danger" (click)="presentConfirmacion()">Asignar</ion-button>
+      </ion-col>
+    </ion-row>
+    <p></p>
+    <p></p>
+    <ion-row>
+      <ion-col>No. Registro</ion-col>
+      <ion-col>Nombre Institucion</ion-col>
+      <ion-col>Nombre Division</ion-col>
+      <ion-col>Nombre Posgrado</ion-col>
+      <ion-col>Modificar</ion-col>
+      <ion-col>Eliminar</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>1</ion-col>
+      <ion-col>Tecnologico de Estudios Superiores de Ecatepec</ion-col>
+      <ion-col>Division en Sistemas Computacionales</ion-col>
+      <ion-col>Maestría en Ingeniería en Sistemas Computacionales</ion-col>
+      <ion-col>
+        <ion-button color="warning" (click)="modificar()">
+          <ion-icon name="create-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="danger" (click)="eliminar()">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</form>

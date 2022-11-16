@@ -3,19 +3,19 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-newinstitucion',
-  templateUrl: './newinstitucion.component.html',
-  styleUrls: ['./newinstitucion.component.scss'],
+  selector: 'app-newposgrado',
+  templateUrl: './newposgrado.component.html',
+  styleUrls: ['./newposgrado.component.scss'],
 })
-export class NewinstitucionComponent implements OnInit {
+export class NewposgradoComponent implements OnInit {
 
-  datosins;
+  datosnpos;
 
   constructor(
     private alertController: AlertController,
-    private ins: FormBuilder
+    private npos: FormBuilder
   ) {
-    this.datosins = ins.group({
+    this.datosnpos = npos.group({
       nombre: ['',Validators.compose([Validators.maxLength(200), Validators.pattern('[a-zA-Z0-9]*'), Validators.required])],
     });
   }
@@ -23,7 +23,7 @@ export class NewinstitucionComponent implements OnInit {
   async presentConfirmacion() {
     const alert = await this.alertController.create({
       header: 'Agregada',
-      message: 'Institucion Agregada',
+      message: 'Posgrado Agregado',
       buttons: ['OK'],
     });
 
@@ -65,4 +65,5 @@ export class NewinstitucionComponent implements OnInit {
   }
 
   ngOnInit() {}
+
 }

@@ -8,11 +8,11 @@ export class ListamenuService {
   listamenu = [
     {
       id: 1,
-      opcion: 'Instituciones'
+      opcion: 'Nueva Institucion'
     },
     {
       id: 2,
-      opcion: 'Divisiones'
+      opcion: 'Nueva Division'
     },
     {
       id: 3,
@@ -20,7 +20,19 @@ export class ListamenuService {
     },
     {
       id: 4,
-      opcion: 'Consultas'
+      opcion: 'Consultas Institucion/Division'
+    },
+    {
+      id: 5,
+      opcion: 'Nuevo Posgrado'
+    },
+    {
+      id: 6,
+      opcion: 'Asignar Posgrado'
+    },
+    {
+      id: 7,
+      opcion: 'Consultas Posgrado'
     },
   ];
 

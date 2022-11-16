@@ -3,27 +3,29 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-newinstitucion',
-  templateUrl: './newinstitucion.component.html',
-  styleUrls: ['./newinstitucion.component.scss'],
+  selector: 'app-asignarposgrado',
+  templateUrl: './asignarposgrado.component.html',
+  styleUrls: ['./asignarposgrado.component.scss'],
 })
-export class NewinstitucionComponent implements OnInit {
+export class AsignarposgradoComponent implements OnInit {
 
-  datosins;
+  datosasipos;
 
   constructor(
     private alertController: AlertController,
-    private ins: FormBuilder
+    private asipos: FormBuilder
   ) {
-    this.datosins = ins.group({
-      nombre: ['',Validators.compose([Validators.maxLength(200), Validators.pattern('[a-zA-Z0-9]*'), Validators.required])],
+    this.datosasipos = asipos.group({
+      posgrado: ['', Validators.required],
+      institucion: ['', Validators.required],
+      division: ['', Validators.required],
     });
   }
 
   async presentConfirmacion() {
     const alert = await this.alertController.create({
-      header: 'Agregada',
-      message: 'Institucion Agregada',
+      header: 'Agregado',
+      message: 'Posgrado Asignada',
       buttons: ['OK'],
     });
 
@@ -36,11 +38,22 @@ export class NewinstitucionComponent implements OnInit {
       buttons: ['OK'],
       inputs: [
         {
-          placeholder: 'Nuevo Nombre',
+          placeholder: 'Nueva Nombre Institucion',
           attributes: {
             maxlength: 200,
           },
         },
+        {
+          placeholder: 'Nueva Nombre Division',
+          attributes: {
+            maxlength: 200,
+          },
+        },{
+          placeholder: 'Nueva Nombre Posgrado',
+          attributes: {
+            maxlength: 200,
+          },
+        }
       ],
     });
 
@@ -65,4 +78,5 @@ export class NewinstitucionComponent implements OnInit {
   }
 
   ngOnInit() {}
+
 }

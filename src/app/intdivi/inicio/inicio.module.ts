@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { InicioPageRoutingModule } from './inicio-routing.module';
 import { InicioPage } from './inicio.page';
-import { ComponentModule } from '../component/component.module';
+import { ComponentModule } from '../component.module';
 
 @NgModule({
   imports: [
