@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>bd</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-label>HOla</ion-label>
+<ion-list>
+  <ion-item>
+    <ion-select placeholder="Select fruit">
+      <ion-select-option *ngFor="let i of listainstituciones" value="{{i.Nombre}}">{{i.Nombre}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+<form [formGroup]="datos" >
+  <ion-item>
+    <ion-label position="floating">id <ion-text color="danger">*</ion-text></ion-label>
+    <ion-input required formControlName="id" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Nombre <ion-text color="danger">*</ion-text></ion-label>
+    <ion-input required formControlName="Nombre" type="text"></ion-input>
+  </ion-item>
+  <ion-button (click)="consultainstitucionid()" block color="primary" [disabled]="datos.invalid">
+    buscar id
+  </ion-button>
+</form>
+
+
+</ion-content>

@@ -6,14 +6,19 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'inicio',
+    redirectTo: 'bd',
     pathMatch: 'full'
   },
 
   {
     path: 'inicio',
     loadChildren: () => import('./intdivi/inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'bd',
+    loadChildren: () => import('./prueba/bd/bd.module').then( m => m.BdPageModule)
   }
+
 ];
 
 @NgModule({
